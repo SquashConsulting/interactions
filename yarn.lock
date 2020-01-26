@@ -97,19 +97,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"auth@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "auth@workspace:."
-  dependencies:
-    "@types/arangodb": ^3.5.3
-    "@types/node": ^13.5.0
-    "@yarnpkg/pnpify": ^2.0.0-rc.16
-    joi: ^14.3.1
-    tslint: ^6.0.0
-    typescript: ^3.7.5
-  languageName: unknown
-  linkType: soft
-
 "balanced-match@npm:^1.0.0":
   version: 1.0.0
   resolution: "balanced-match@npm:1.0.0"
@@ -305,6 +292,19 @@ __metadata:
   checksum: d11734fde3095ce63e83a4be33779c8597b0c95edec3efcadf9a78a9312a520028e25acb2d126656005791550f9f2e17de3ea6abeb026fa24627401e5e174d6c
   languageName: node
   linkType: hard
+
+"interactions@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "interactions@workspace:."
+  dependencies:
+    "@types/arangodb": ^3.5.3
+    "@types/node": ^13.5.0
+    "@yarnpkg/pnpify": ^2.0.0-rc.16
+    joi: ^14.3.1
+    tslint: ^6.0.0
+    typescript: ^3.7.5
+  languageName: unknown
+  linkType: soft
 
 "isemail@npm:3.x.x":
   version: 3.2.0
