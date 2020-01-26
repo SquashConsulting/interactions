@@ -1,5 +1,5 @@
 {
-  "name": "auth",
+  "name": "interactions",
   "version": "0.0.0",
   "description": "Foxx TypeScript Service",
   "main": "dist/entry.js",
@@ -7,14 +7,19 @@
   "private": true,
   "scripts": {
     "build": "tsc -p .",
-    "config:editor": "yarn pnpify --sdk"
+    "config:editor": "yarn pnpify --sdk",
+    "setup": "foxx server set squash http://localhost:8529 --database squash && yarn run install:service",
+    "install:service": "yarn build && foxx install /interactions --server squash --database squash",
+    "upgrade:service": "yarn build && foxx upgrade /interactions --server squash --database squash"
   },
   "devDependencies": {
     "@types/arangodb": "^3.5.3",
     "@types/node": "^13.5.0",
     "@yarnpkg/pnpify": "^2.0.0-rc.16",
-    "joi": "^14.3.1",
     "tslint": "^6.0.0",
     "typescript": "^3.7.5"
+  },
+  "dependencies": {
+    "joi": "^14.3.1"
   }
 }
