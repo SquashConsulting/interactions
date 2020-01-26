@@ -1,16 +1,19 @@
 import joi from "joi";
 
+import { User } from "../models";
+import { IRequest } from "../interfaces";
+
 export default function hello(router: Foxx.Router): Foxx.Router {
   router
-    .get("/hello", (_req: Foxx.Request, res: Foxx.Response) => {
-      const result: string = "Hello World!";
+    .get("/", (req: IRequest, res: Foxx.Response) => {
+      const result: User = req.currentUser;
 
       res.send({ result });
     })
     .response(
       joi
         .object({
-          result: joi.string().required()
+          result: joi.object().required()
         })
         .required(),
       "result"
