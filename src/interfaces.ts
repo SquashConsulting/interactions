@@ -6,3 +6,7 @@ export interface IRequest extends Foxx.Request {
   };
   currentUser: ArangoDB.Document;
 }
+
+export interface ICollection {
+  [key: string]: string;
+}

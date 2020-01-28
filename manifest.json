@@ -7,6 +7,9 @@
   "scripts": {
     "setup": "dist/scripts/setup.js"
   },
+  "dependencies": {
+    "shared": "shared:^0.0.0"
+  },
   "name": "interactions",
   "version": "0.0.0",
   "tests": "test/**/*.js"

@@ -1,6 +1,7 @@
 import router from "./routes";
-import clientSession from "./middlewares/clientSession";
 
-module.context.use(clientSession);
+const { MIDDLEWARES } = module.context.dependencies.shared;
+
+module.context.use(MIDDLEWARES.clientSession);
 
 module.context.use(router);
